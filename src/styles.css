@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --main-color: #1dac99;
+}
+.mProfilePhoto{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+a{
+    text-decoration: none;
+    color: currentColor;
+}
+a:hover{
+    cursor: pointer;
+}
+
+.mTextMainColor{
+    color: var(--main-color);
+}
