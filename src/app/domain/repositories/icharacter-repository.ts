@@ -1,7 +1,7 @@
 import { ICharacterModel } from "../models/icharacter-model";
 
 export interface ICharacterRepositoryResponse {
-    characters: number;
+    characters: ICharacterModel[];
     total: number;
 }
 

@@ -1,7 +1,7 @@
 import { ILocationModel } from "src/app/domain/models/ilocation-model";
 
 export class LocationApiDto {
-    fromJson(json:any): ILocationModel|null {
+    static fromJson(json:any): ILocationModel {
         return {
             id: json.id,
             name: json.name,
