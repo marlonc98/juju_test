@@ -1,7 +1,7 @@
 import { ICharacterModel } from "../models/icharacter-model";
 
 export interface ICharacterRepositoryResponse {
-    pages: number;
+    characters: number;
     total: number;
 }
 
