@@ -3,7 +3,7 @@ import { LocationApiRepository } from 'src/app/data/repository/location/location
 import { ICharacterModel } from 'src/app/domain/models/icharacter-model';
 import { ILocationModel } from 'src/app/domain/models/ilocation-model';
 import { ILocationRepository } from 'src/app/domain/repositories/ilocation-repository';
-import { GetLocationByIdUseCaseService } from 'src/app/domain/use-cases/get-location-by-id-use-case.service';
+import { GetLocationByIdUseCaseService } from 'src/app/domain/use-cases/get-location-by-id-use-case';
 
 @Component({
   selector: 'app-character-card',
