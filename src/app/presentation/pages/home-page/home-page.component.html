@@ -1,4 +1,4 @@
-<div class="container-fluid  p-5">
+<div class="container">
     <div class="row">
         <div class="col-md-8">
             <h4 class="mb-0 mTextMainColor">Rick And Morty Characteres</h4>
@@ -9,7 +9,8 @@
         </div>
     </div>
     <!-- content -->
-    <div class="row">
+    <div class="row mt-3">
+        <app-character-card *ngFor="let character of characters" [character]="character" class=" col-12 col-md-4 col-lg-3"></app-character-card>
     </div>
     <!-- end content -->
     <!-- paginator -->

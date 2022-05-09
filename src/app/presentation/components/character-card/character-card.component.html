@@ -1,1 +1,8 @@
-<p>character-card works!</p>
+<div class="mCharacterCard card m-1">
+    <img [src]="character!.image" class="card-img-top" alt="...">
+    <strong class="mTextCard card-body">
+        <h5 class="mTextMainColor">{{character!.name}}</h5>
+        <span>Status {{character!.status}}</span>
+        <span>Last location: {{character!.lastLocationName}}</span>
+    </strong>
+</div>

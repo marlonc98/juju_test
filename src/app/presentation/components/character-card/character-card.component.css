@@ -1,0 +1,16 @@
+@media screen and (min-width: 768px) {
+    .mTextCard{
+        display: none;
+    }
+    .mCharacterCard:hover .mTextCard{
+        display: block;
+        cursor: pointer;
+        background-color: #ffffffaa;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+    }
+}

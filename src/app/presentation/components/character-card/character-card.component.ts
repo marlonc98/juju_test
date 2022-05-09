@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ICharacterModel } from 'src/app/domain/models/icharacter-model';
 
 @Component({
   selector: 'app-character-card',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-card.component.css']
 })
 export class CharacterCardComponent implements OnInit {
+  @Input() character: ICharacterModel|undefined;
 
-  constructor() { }
+  constructor() {
+
+   }
 
   ngOnInit(): void {
   }
