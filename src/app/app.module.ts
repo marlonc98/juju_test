@@ -8,12 +8,20 @@ import { HomePageComponent } from './presentation/pages/home-page/home-page.comp
 import { CharacterCardComponent } from './presentation/components/character-card/character-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ModalInfoComponent } from './presentation/components/modal-info/modal-info.component';
+import { CharacterInfoPageComponent } from './presentation/pages/character-info-page/character-info-page.component';
+import { HeaderComponentComponent } from './presentation/components/header-component/header-component.component';
+import { FooterComponentComponent } from './presentation/components/footer-component/footer-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    ModalInfoComponent,
+    CharacterInfoPageComponent,
+    HeaderComponentComponent,
+    FooterComponentComponent
   ],
   imports: [
     BrowserModule,

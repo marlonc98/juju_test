@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import { ILocationModel } from '../models/ilocation-model';
 import { ILocationRepository } from '../repositories/ilocation-repository';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class GetLocationByIdUseCaseService {
   private locationRepository: ILocationRepository
   constructor(locationRepository: ILocationRepository) {

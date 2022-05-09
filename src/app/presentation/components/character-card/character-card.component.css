@@ -3,7 +3,7 @@
         display: none;
     }
     .mCharacterCard:hover .mTextCard{
-        display: block;
+        display: flex;
         cursor: pointer;
         background-color: #ffffffaa;
         position: absolute;
@@ -13,4 +13,18 @@
         bottom: 0;
         position: absolute;
     }
+}
+
+a:hover{
+    text-decoration: none;
+    color: currentColor;
+}
+
+.mCharacterCard .mTextCard{
+    font-weight: lighter;
+}
+
+.mUrlLocation{
+    font-weight: bold;
+    text-decoration: underline;
 }

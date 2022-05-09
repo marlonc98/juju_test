@@ -1,0 +1,18 @@
+<div class="mModalBackground" *ngIf="location != null">
+    <div class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header mBgMain">
+                    <h5 class="modal-title">{{location!.name}}</h5>
+                    <div class="btn" data-dismiss="modal" aria-label="Close" (click)="location=null">
+                        <span aria-hidden="true">&times;</span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Dimension: {{location!.dimension}}</p>
+                    <p>Type: {{location!.type}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

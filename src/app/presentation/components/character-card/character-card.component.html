@@ -1,8 +1,14 @@
-<div class="mCharacterCard card m-1">
+<div class="mCharacterCard card  m-2">
     <img [src]="character!.image" class="card-img-top" alt="...">
-    <strong class="mTextCard card-body">
-        <h5 class="mTextMainColor">{{character!.name}}</h5>
-        <span>Status {{character!.status}}</span>
-        <span>Last location: {{character!.lastLocationName}}</span>
-    </strong>
+    <div class="mTextCard card-body flex-column justify-content-between ">
+        <a class="flex-grow-1" [routerLink]="'/character/'+character!.id">
+            <strong>
+                <h5 class="mTextMainColor">{{character!.name}}</h5>
+                <span>Status {{character!.status}}</span><br />
+            </strong>
+        </a>
+        <span class="mUrlLocation" (click)="openModal()">Last location: {{character!.lastLocationName}}</span>
+    </div>
 </div>
+
+<app-modal-info [location]="currentLocation" *ngIf="currentLocation != null"></app-modal-info>

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { CharacterApiRepository } from 'src/app/data/repository/character/character-api-repository';
 import { ICharacterModel } from 'src/app/domain/models/icharacter-model';
-import { ICharacterRepository, ICharacterRepositoryResponse } from 'src/app/domain/repositories/icharacter-repository';
+import { ILocationModel } from 'src/app/domain/models/ilocation-model';
+import { ICharacterRepository } from 'src/app/domain/repositories/icharacter-repository';
 import { GetCharactersUseCase } from 'src/app/domain/use-cases/get-characters-use-case';
 
 @Component({
@@ -39,8 +40,11 @@ export class HomePageComponent implements OnInit {
     this._getCharacteres(1);
   }
 
+ 
+
   ngOnInit(): void {
     this._getCharacteres(1);
   }
+  
 
 }
