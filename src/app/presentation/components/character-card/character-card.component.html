@@ -1,5 +1,7 @@
 <div class="mCharacterCard card  m-2">
-    <img [src]="character!.image" class="card-img-top" alt="...">
+    <a [routerLink]="'/character/'+character!.id">
+        <img [src]="character!.image" class="card-img-top" alt="...">
+    </a>
     <div class="mTextCard card-body flex-column justify-content-between ">
         <a class="flex-grow-1" [routerLink]="'/character/'+character!.id">
             <strong>

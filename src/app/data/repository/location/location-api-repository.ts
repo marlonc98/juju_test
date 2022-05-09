@@ -7,6 +7,7 @@ export class LocationApiRepository implements ILocationRepository {
         return fetch("https://rickandmortyapi.com/api/location/" + id).then(response => response.json() as any).then(response => {
             if(response == null) return null;
             let parse: ILocationModel = LocationApiDto.fromJson(response);
+            if(parse.id == null) return null;
             return parse;
         }).catch((err) => {
             return null;
