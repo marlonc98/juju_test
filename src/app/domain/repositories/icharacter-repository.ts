@@ -8,5 +8,5 @@ export interface ICharacterRepositoryResponse {
 
 export interface ICharacterRepository {
     getCharacters(page:number, word:String): Promise<ICharacterRepositoryResponse>;
-    getCharacter(id:number): Promise<ICharacterModel|null>;
+    getById(id:number): Promise<ICharacterModel|null>;
 }

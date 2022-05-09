@@ -1,6 +1,6 @@
 import { IEpisodeModel } from "src/app/domain/models/iepisode-model";
 
-export class EpisodeDto {
+export class EpisodeApiDto {
     static fromJson(json:any): IEpisodeModel {
         return {
             id: json.id,

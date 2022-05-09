@@ -3,7 +3,7 @@ import { ICharacterRepository, ICharacterRepositoryResponse } from "src/app/doma
 import { CharacterApiDto } from "../../api/dto/character-api-dto";
 
 export class CharacterApiRepository implements ICharacterRepository {
-    getCharacters(page: number, word: String): Promise<ICharacterRepositoryResponse> {
+    async getCharacters(page: number, word: String): Promise<ICharacterRepositoryResponse> {
         return fetch("https://rickandmortyapi.com/api/character/?page=" + page + "&name=" + word).then(response => response.json() as any).then(response => {
             let parse: ICharacterRepositoryResponse = {
                 characters: response.results.map((character: any): CharacterApiDto => CharacterApiDto.fromJson(character)),
@@ -20,9 +20,9 @@ export class CharacterApiRepository implements ICharacterRepository {
             return parse;
         });
     }
-    getCharacter(id: number): Promise<ICharacterModel | null> {
+    async getById(id: number): Promise<ICharacterModel | null> {
         return fetch("https://rickandmortyapi.com/api/character/" + id).then(response => response.json() as any).then(response => {
-            let parse: ICharacterModel = CharacterApiDto.fromJson(response.results);
+            let parse: ICharacterModel = CharacterApiDto.fromJson(response);
             return parse;
         }).catch((err) => {
             return null;

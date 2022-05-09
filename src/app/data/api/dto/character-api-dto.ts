@@ -6,7 +6,7 @@ export class CharacterApiDto {
             id: json.id,
             name: json.name,
             status: json.status,
-            firstEpisodeName: null,
+            firstEpisodeId: json.episode[0].split("/").at(-1),
             lastLocationName: json.location.name,
             originName: json.origin.name,
             image: json.image,

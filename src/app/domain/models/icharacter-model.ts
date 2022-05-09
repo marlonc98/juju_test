@@ -2,7 +2,7 @@ export interface ICharacterModel {
     id: number;
     name:String;
     status:String;
-    firstEpisodeName:String|null;
+    firstEpisodeId: number;
     lastLocationName:String;
     lastLocationId: number;
     image:String;
