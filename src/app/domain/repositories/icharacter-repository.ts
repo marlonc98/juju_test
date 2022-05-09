@@ -2,7 +2,8 @@ import { ICharacterModel } from "../models/icharacter-model";
 
 export interface ICharacterRepositoryResponse {
     characters: ICharacterModel[];
-    total: number;
+    count: number;
+    pages: number;
 }
 
 export interface ICharacterRepository {

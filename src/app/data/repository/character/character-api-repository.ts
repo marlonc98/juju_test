@@ -7,13 +7,15 @@ export class CharacterApiRepository implements ICharacterRepository {
         return fetch("https://rickandmortyapi.com/api/character/?page=" + page + "&name=" + word).then(response => response.json() as any).then(response => {
             let parse: ICharacterRepositoryResponse = {
                 characters: response.results.map((character: any): CharacterApiDto => CharacterApiDto.fromJson(character)),
-                total: response.info.pages
+                pages: response.info.pages,
+                count: response.info.count
             };
             return parse;
         }).catch((err) => {
             let parse: ICharacterRepositoryResponse = {
                 characters: [],
-                total: 0
+                pages: 0,
+                count: 0
             }
             return parse;
         });
